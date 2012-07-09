@@ -1,4 +1,5 @@
 # require 'todo_gem'
+require "roo/version"
 
 module Roo
 
