@@ -4,8 +4,6 @@ require 'date'
 require 'rubygems'
 require 'nokogiri'
 
-      require 'ruby-debug'
-
 if RUBY_VERSION < '1.9.0'
   class  String
     def end_with?(str)
