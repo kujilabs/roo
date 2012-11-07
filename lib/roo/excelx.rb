@@ -107,7 +107,7 @@ class Excelx < GenericSpreadsheet
     unless File.exists?(@tmpdir)
       FileUtils::mkdir(@tmpdir)
     end
-    filename = open_from_uri(filename) if filename[0,7] == "http://"
+    filename = open_from_uri(filename) if filename[0,8] =~ /\Ahttps?:\/\//
     filename = unzip(filename) if packed and packed == :zip
     @cells_read = Hash.new
     @filename = filename
